@@ -2,8 +2,14 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import { Image } from "astro:assets";
-import astroImage from "..//astro.jpg";
-import vscodeImage from "..//vscode.png";
+import profilImage from "../profil.jpg";
+import instagramImage from "../instagram.png";
+import linkedinImage from "../linkedin.png";
+import githubImage from "../github.png";
+import unpamImage from "../unpam.png";
+import spotifyImage from "../spotify.png";
+import steamImage from "..//steam.png";
+import twitchImage from "..//twitch.png";
 ---
 
 <Layout title="My Website">
@@ -25,33 +31,42 @@ import vscodeImage from "..//vscode.png";
       aria-hidden="true"
     >
     </svg>
-
+    <h1><span class="text-gradient">Alfan Hidayat</span></h1>
     <p class="instructions">
-      Selamat Datang Di Website<br />
+      <Image
+        src={profilImage}
+        alt="descriptive text"
+        style="width: 100px; height: 100px; border-radius: 50%; float: right; display: block; margin: 0 auto;"
+      />
+       Saya Adalah Mahasiswa Semester 1<br />
+      <strong>Teknik Informatika</strong><br />
+      <strong>Universitas Pamulang</strong>
     </p>
-    <p class="astro">
-      <a href="https://astro.build/" rel="noopener noreferrer">
-        <Image
-          src={astroImage}
-          alt="descriptive text"
-          style="width: 100px; height: 100px; border-radius: 50%; float: right; display: block; margin: 0 auto;"
-        />
-      </a>
-       Website Ini Menggunakan :<br />
-       Framework<br />
-      <strong>Astro</strong><br />
-    </p>
-    <p class="vscode">
-      <a href="https://code.visualstudio.com/" rel="noopener noreferrer">
-        <Image
-          src={vscodeImage}
-          alt="descriptive text"
-          style="width: 100px; height: 100px; border-radius: 50%; float: left; display: block; margin: 0 auto;"
-        />
-      </a>
-       Dengan Menggunakan :<br />
-       Software<br />
-      <strong>Visual Studio Code</strong><br />
+    <ul role="list" class="link-card-grid">
+      <Card
+        href="https://mail.google.com/?alfanpartll@gmail.com"
+        title="Email"
+        body="Kirim Email"
+      />
+      <Card
+        href="https://www.instagram.com/kelraskie/"
+        title="Instagram"
+        body="My Instagram"
+      />
+      <Card
+        href="https://www.tiktok.com/@kelsk1e"
+        title="Tiktok"
+        body="My Tiktok Profile"
+      />
+      <Card
+        href="https://open.spotify.com/playlist/58iyDhFJT2XZztfrXJMjsV"
+        title="Spotify"
+        body="My Playlist"
+      />
+    </ul>
+    <p class="footer" style={{ textAlign: "center" }}>
+      Contact Me : <br />
+      <strong>alfanpartll@gmail.com</strong><br />
     </p>
   </main>
 </Layout>
@@ -90,7 +105,6 @@ import vscodeImage from "..//vscode.png";
     background-position: 0%;
   }
   .instructions {
-    text-align: center;
     margin-bottom: 2rem;
     border: 1px solid rgba(var(--accent-light), 25%);
     background: linear-gradient(
@@ -110,52 +124,6 @@ import vscodeImage from "..//vscode.png";
     padding: 0.3em 0.4em;
   }
   .instructions strong {
-    color: rgb(var(--accent-light));
-  }
-  .astro {
-    text-align: left;
-    margin-bottom: 2rem;
-    border: 1px solid rgba(var(--accent-light), 25%);
-    background: linear-gradient(
-      rgba(var(--accent-dark), 66%),
-      rgba(var(--accent-dark), 33%)
-    );
-    padding: 1.5rem;
-    border-radius: 8px;
-    background-color: plum;
-  }
-  .astro code {
-    font-size: 0.8em;
-    font-weight: bold;
-    background: rgba(var(--accent-light), 12%);
-    color: rgb(var(--accent-light));
-    border-radius: 4px;
-    padding: 0.3em 0.4em;
-  }
-  .astro strong {
-    color: rgb(var(--accent-light));
-  }
-  .vscode {
-    text-align: right;
-    margin-bottom: 2rem;
-    border: 1px solid rgba(var(--accent-light), 25%);
-    background: linear-gradient(
-      rgba(var(--accent-dark), 66%),
-      rgba(var(--accent-dark), 33%)
-    );
-    padding: 1.5rem;
-    border-radius: 8px;
-    background-color: plum;
-  }
-  .vscode code {
-    font-size: 0.8em;
-    font-weight: bold;
-    background: rgba(var(--accent-light), 12%);
-    color: rgb(var(--accent-light));
-    border-radius: 4px;
-    padding: 0.3em 0.4em;
-  }
-  .vscode strong {
     color: rgb(var(--accent-light));
   }
   .link-card-grid {
